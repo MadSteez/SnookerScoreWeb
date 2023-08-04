@@ -4,44 +4,60 @@
 <head>
     <meta charset="utf-8" />
     <title>Snooker Score</title>
+    <link rel="stylesheet" href=".\CSS\Style.css" />
 </head>
 <body>
-    <h1 id="Reset" onclick="ClearPoints()">Reset</h1>
+    <h1>Snooker Score</h1>
+    <button id="Reset" onclick="ClearPoints()">Reset</button>
 
-    <h1 id="Speler1">Speler 1</h1>
-    <h1 id="Score1">0</h1>
+    <br />
 
-    <img onclick="AddPoints('Score1', 1)" src=".\images\Bal Rood_128x128.png" width="100" height="100" />
-    <img onclick="AddPoints('Score1', 2)" src=".\images\Bal Geel_128x128.png" width="100" height="100" />
-    <img onclick="AddPoints('Score1', 3)" src=".\images\Bal Groen_128x128.png" width="100" height="100" />
-    <img onclick="AddPoints('Score1', 4)" src=".\images\Bal Bruin_128x128.png" width="100" height="100" />
-    <img onclick="AddPoints('Score1', 5)" src=".\images\Bal Blauw_128x128.png" width="100" height="100" />
-    <img onclick="AddPoints('Score1', 6)" src=".\images\Bal Roze_128x128.png" width="100" height="100" />
-    <img onclick="AddPoints('Score1', 7)" src=".\images\Bal Zwart_128x128.png" width="100" height="100" />
-    <img onclick="AddPoints('Score2', 4)" src=".\images\Bal Wit_128x128.png" width="100" height="100" />
-    <img onclick="AddPoints('Score2', 4)" src=".\images\Fout_128x128.png" width="100" height="100" />
+    <input id="Speler1Naam" type="text" placeholder="Speler 1" size="10" />
+    <label id="Speler1Score">0</label>
 
-    <h1 id="Speler2">Speler 2</h1>
-    <h1 id="Score2">0</h1>
+    <br />
 
-    <img onclick="AddPoints('Score2', 1)" src=".\images\Bal Rood_128x128.png" width="100" height="100" />
-    <img onclick="AddPoints('Score2', 2)" src=".\images\Bal Geel_128x128.png" width="100" height="100" />
-    <img onclick="AddPoints('Score2', 3)" src=".\images\Bal Groen_128x128.png" width="100" height="100" />
-    <img onclick="AddPoints('Score2', 4)" src=".\images\Bal Bruin_128x128.png" width="100" height="100" />
-    <img onclick="AddPoints('Score2', 5)" src=".\images\Bal Blauw_128x128.png" width="100" height="100" />
-    <img onclick="AddPoints('Score2', 6)" src=".\images\Bal Roze_128x128.png" width="100" height="100" />
-    <img onclick="AddPoints('Score2', 7)" src=".\images\Bal Zwart_128x128.png" width="100" height="100" />
-    <img onclick="AddPoints('Score1', 4)" src=".\images\Bal Wit_128x128.png" width="100" height="100" />
-    <img onclick="AddPoints('Score1', 4)" src=".\images\Fout_128x128.png" width="100" height="100" />
+    <img onclick="AddPoints('Speler1Score', 1)" src=".\images\Bal Rood_128x128.png" alt="Afbeelding Bal Rood" width="100" height="100" />
+    <img onclick="AddPoints('Speler1Score', 2)" src=".\images\Bal Geel_128x128.png" alt="Afbeelding Bal Geel" width="100" height="100" />
+    <img onclick="AddPoints('Speler1Score', 3)" src=".\images\Bal Groen_128x128.png" alt="Afbeelding Bal Groen" width="100" height="100" />
+    <img onclick="AddPoints('Speler1Score', 4)" src=".\images\Bal Bruin_128x128.png" alt="Afbeelding Bal Bruin" width="100" height="100" />
+    <img onclick="AddPoints('Speler1Score', 5)" src=".\images\Bal Blauw_128x128.png" alt="Afbeelding Bal Blauw" width="100" height="100" />
+    <img onclick="AddPoints('Speler1Score', 6)" src=".\images\Bal Roze_128x128.png" alt="Afbeelding Bal Roze" width="100" height="100" />
+    <img onclick="AddPoints('Speler1Score', 7)" src=".\images\Bal Zwart_128x128.png" alt="Afbeelding Bal Zwart" width="100" height="100" />
+    <img onclick="AddPoints('Speler2Score', 4)" src=".\images\Bal Wit_128x128.png" alt="Afbeelding Bal Wit" width="100" height="100" />
+    <img onclick="AddPoints('Speler2Score', 4)" src=".\images\Fout_128x128.png" alt="Afbeelding Fout" width="100" height="100" />
+
+    <br />
+    <br />
+    <br />
+
+    <input id="Speler2Naam" type="text" placeholder="Speler 2" size="10" />
+    <label id="Speler2Score">0</label>
+
+    <br />
+
+    <img onclick="AddPoints('Speler2Score', 1)" src=".\images\Bal Rood_128x128.png" alt="Afbeelding Bal Rood" width="100" height="100" />
+    <img onclick="AddPoints('Speler2Score', 2)" src=".\images\Bal Geel_128x128.png" alt="Afbeelding Bal Geel" width="100" height="100" />
+    <img onclick="AddPoints('Speler2Score', 3)" src=".\images\Bal Groen_128x128.png" alt="Afbeelding Bal Groen" width="100" height="100" />
+    <img onclick="AddPoints('Speler2Score', 4)" src=".\images\Bal Bruin_128x128.png" alt="Afbeelding Bal Bruin" width="100" height="100" />
+    <img onclick="AddPoints('Speler2Score', 5)" src=".\images\Bal Blauw_128x128.png" alt="Afbeelding Bal Blauw" width="100" height="100" />
+    <img onclick="AddPoints('Speler2Score', 6)" src=".\images\Bal Roze_128x128.png" alt="Afbeelding Bal Roze" width="100" height="100" />
+    <img onclick="AddPoints('Speler2Score', 7)" src=".\images\Bal Zwart_128x128.png" alt="Afbeelding Bal Zwart" width="100" height="100" />
+    <img onclick="AddPoints('Speler1Score', 4)" src=".\images\Bal Wit_128x128.png" alt="Afbeelding Bal Wit" width="100" height="100" />
+    <img onclick="AddPoints('Speler1Score', 4)" src=".\images\Fout_128x128.png" alt="Afbeelding Fout" width="100" height="100" />
 
     <script>
+        function ChangeName(SpelerID) {
+            document.getElementById(SpelerID).textContent = "Mathijs"
+        }
+
         function AddPoints(ScoreID, Points) {
             document.getElementById(ScoreID).textContent = parseInt(document.getElementById(ScoreID).textContent) + Points
         }
 
         function ClearPoints() {
-            document.getElementById("Score1").textContent = 0
-            document.getElementById("Score2").textContent = 0
+            document.getElementById("Speler1Score").textContent = 0
+            document.getElementById("Speler2Score").textContent = 0
         }
     </script>
 </body>
