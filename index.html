@@ -7,6 +7,14 @@
 </head>
 <body>
     <h1>Snooker Score Web</h1>
-    <p>Test Tekst</p>
+    <p id="Score1">0</p>
+    <button onclick="AddPoints('Score1', 1)">+1</button>
+    <p id="Score2">0</p>
+    <button onclick="AddPoints('Score2', 1)">+1</button>
+    <script>
+        function AddPoints(ScoreID, Points) {
+            document.getElementById(ScoreID).textContent = parseInt(document.getElementById(ScoreID).textContent) + Points
+        }
+    </script>
 </body>
 </html>
