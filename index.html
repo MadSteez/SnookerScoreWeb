@@ -8,47 +8,69 @@
 </head>
 <body>
     <h1>Snooker Score</h1>
-    <button id="Reset" onclick="ClearPoints()">Reset</button>
+    <button id="Reset" class="button-reset" onclick="ClearPoints()">Reset</button>
 
     <br />
 
-    <input id="Speler1Naam" type="text" placeholder="Speler 1" size="10" />
-    <label id="Speler1Score">0</label>
+    <label class="label-naam" id="Speler1Naam" onclick="ChangeLabelValue('Speler1Naam')">Speler 1</label>
+    <label class="label-score" id="Speler1Score" onclick="ChangeLabelValue('Speler1Score')">0</label>
 
     <br />
 
-    <img onclick="AddPoints('Speler1Score', 1)" src=".\images\Bal Rood_128x128.png" alt="Afbeelding Bal Rood" width="100" height="100" />
-    <img onclick="AddPoints('Speler1Score', 2)" src=".\images\Bal Geel_128x128.png" alt="Afbeelding Bal Geel" width="100" height="100" />
-    <img onclick="AddPoints('Speler1Score', 3)" src=".\images\Bal Groen_128x128.png" alt="Afbeelding Bal Groen" width="100" height="100" />
-    <img onclick="AddPoints('Speler1Score', 4)" src=".\images\Bal Bruin_128x128.png" alt="Afbeelding Bal Bruin" width="100" height="100" />
-    <img onclick="AddPoints('Speler1Score', 5)" src=".\images\Bal Blauw_128x128.png" alt="Afbeelding Bal Blauw" width="100" height="100" />
-    <img onclick="AddPoints('Speler1Score', 6)" src=".\images\Bal Roze_128x128.png" alt="Afbeelding Bal Roze" width="100" height="100" />
-    <img onclick="AddPoints('Speler1Score', 7)" src=".\images\Bal Zwart_128x128.png" alt="Afbeelding Bal Zwart" width="100" height="100" />
-    <img onclick="AddPoints('Speler2Score', 4)" src=".\images\Bal Wit_128x128.png" alt="Afbeelding Bal Wit" width="100" height="100" />
-    <img onclick="AddPoints('Speler2Score', 4)" src=".\images\Fout_128x128.png" alt="Afbeelding Fout" width="100" height="100" />
+    <img id="Speler1Rood" onclick="AddPoints('Speler1Score', 1)" src=".\images\Bal Rood_128x128.png" alt="Afbeelding Bal Rood" width="100" height="100" />
+    <img id="Speler1Geel" onclick="AddPoints('Speler1Score', 2)" src=".\images\Bal Geel_128x128.png" alt="Afbeelding Bal Geel" width="100" height="100" />
+    <img id="Speler1Groen" onclick="AddPoints('Speler1Score', 3)" src=".\images\Bal Groen_128x128.png" alt="Afbeelding Bal Groen" width="100" height="100" />
+    <img id="Speler1Bruin" onclick="AddPoints('Speler1Score', 4)" src=".\images\Bal Bruin_128x128.png" alt="Afbeelding Bal Bruin" width="100" height="100" />
+    <img id="Speler1Blauw" onclick="AddPoints('Speler1Score', 5)" src=".\images\Bal Blauw_128x128.png" alt="Afbeelding Bal Blauw" width="100" height="100" />
+    <img id="Speler1Roze" onclick="AddPoints('Speler1Score', 6)" src=".\images\Bal Roze_128x128.png" alt="Afbeelding Bal Roze" width="100" height="100" />
+    <img id="Speler1Zwart" onclick="AddPoints('Speler1Score', 7)" src=".\images\Bal Zwart_128x128.png" alt="Afbeelding Bal Zwart" width="100" height="100" />
+    <img id="Speler1Wit" onclick="AddPoints('Speler2Score', 4)" src=".\images\Bal Wit_128x128.png" alt="Afbeelding Bal Wit" width="100" height="100" />
+    <img id="Speler1Fout" onclick="OpenPopup('Speler2Score')" src=".\images\Fout_128x128.png" alt="Afbeelding Fout" width="100" height="100" />
 
     <br />
     <br />
     <br />
 
-    <input id="Speler2Naam" type="text" placeholder="Speler 2" size="10" />
-    <label id="Speler2Score">0</label>
+    <label class="label-naam" id="Speler2Naam" onclick="ChangeLabelValue('Speler2Naam')">Speler 2</label>
+    <label class="label-score" id="Speler2Score" onclick="ChangeLabelValue('Speler2Score')">0</label>
 
     <br />
 
-    <img onclick="AddPoints('Speler2Score', 1)" src=".\images\Bal Rood_128x128.png" alt="Afbeelding Bal Rood" width="100" height="100" />
-    <img onclick="AddPoints('Speler2Score', 2)" src=".\images\Bal Geel_128x128.png" alt="Afbeelding Bal Geel" width="100" height="100" />
-    <img onclick="AddPoints('Speler2Score', 3)" src=".\images\Bal Groen_128x128.png" alt="Afbeelding Bal Groen" width="100" height="100" />
-    <img onclick="AddPoints('Speler2Score', 4)" src=".\images\Bal Bruin_128x128.png" alt="Afbeelding Bal Bruin" width="100" height="100" />
-    <img onclick="AddPoints('Speler2Score', 5)" src=".\images\Bal Blauw_128x128.png" alt="Afbeelding Bal Blauw" width="100" height="100" />
-    <img onclick="AddPoints('Speler2Score', 6)" src=".\images\Bal Roze_128x128.png" alt="Afbeelding Bal Roze" width="100" height="100" />
-    <img onclick="AddPoints('Speler2Score', 7)" src=".\images\Bal Zwart_128x128.png" alt="Afbeelding Bal Zwart" width="100" height="100" />
-    <img onclick="AddPoints('Speler1Score', 4)" src=".\images\Bal Wit_128x128.png" alt="Afbeelding Bal Wit" width="100" height="100" />
-    <img onclick="AddPoints('Speler1Score', 4)" src=".\images\Fout_128x128.png" alt="Afbeelding Fout" width="100" height="100" />
+    <img id="Speler2Rood" onclick="AddPoints('Speler2Score', 1)" src=".\images\Bal Rood_128x128.png" alt="Afbeelding Bal Rood" width="100" height="100" />
+    <img id="Speler2Geel" onclick="AddPoints('Speler2Score', 2)" src=".\images\Bal Geel_128x128.png" alt="Afbeelding Bal Geel" width="100" height="100" />
+    <img id="Speler2Groen" onclick="AddPoints('Speler2Score', 3)" src=".\images\Bal Groen_128x128.png" alt="Afbeelding Bal Groen" width="100" height="100" />
+    <img id="Speler2Bruin" onclick="AddPoints('Speler2Score', 4)" src=".\images\Bal Bruin_128x128.png" alt="Afbeelding Bal Bruin" width="100" height="100" />
+    <img id="Speler2Blauw" onclick="AddPoints('Speler2Score', 5)" src=".\images\Bal Blauw_128x128.png" alt="Afbeelding Bal Blauw" width="100" height="100" />
+    <img id="Speler2Roze" onclick="AddPoints('Speler2Score', 6)" src=".\images\Bal Roze_128x128.png" alt="Afbeelding Bal Roze" width="100" height="100" />
+    <img id="Speler2Zwart" onclick="AddPoints('Speler2Score', 7)" src=".\images\Bal Zwart_128x128.png" alt="Afbeelding Bal Zwart" width="100" height="100" />
+    <img id="Speler2Wit" onclick="AddPoints('Speler1Score', 4)" src=".\images\Bal Wit_128x128.png" alt="Afbeelding Bal Wit" width="100" height="100" />
+    <img id="Speler2Fout" onclick="OpenPopup('Speler1Score')" src=".\images\Fout_128x128.png" alt="Afbeelding Fout" width="100" height="100" />
+
+    <div id="popup" class="popup">
+        <div class="popup-venster">
+            <button class="popup-button" onclick="AddPoints(document.getElementById('popup').dataset.ScoreID, 4); ClosePopup()">Rood</button>
+            <button class="popup-button" onclick="AddPoints(document.getElementById('popup').dataset.ScoreID, 4); ClosePopup()">Geel</button>
+            <button class="popup-button" onclick="AddPoints(document.getElementById('popup').dataset.ScoreID, 4); ClosePopup()">Groen</button>
+            <button class="popup-button" onclick="AddPoints(document.getElementById('popup').dataset.ScoreID, 4); ClosePopup()">Bruin</button>
+            <button class="popup-button" onclick="AddPoints(document.getElementById('popup').dataset.ScoreID, 5); ClosePopup()">Blauw</button>
+            <button class="popup-button" onclick="AddPoints(document.getElementById('popup').dataset.ScoreID, 6); ClosePopup()">Roze</button>
+            <button class="popup-button" onclick="AddPoints(document.getElementById('popup').dataset.ScoreID, 7); ClosePopup()">Zwart</button>
+            <button class="popup-button" onclick="ClosePopup()">Cancel</button>
+        </div>
+    </div>
 
     <script>
-        function ChangeName(SpelerID) {
-            document.getElementById(SpelerID).textContent = "Mathijs"
+        function ChangeLabelValue(LabelID) {
+            // Get the current label value
+            var currentValue = document.getElementById(LabelID).innerText;
+
+            // Show a prompt to the user and get the new value
+            var newValue = prompt("Enter the new value:", currentValue);
+
+            // Check if the user entered a new value and update the label if it's valid
+            if (newValue !== null && newValue.trim() !== "") {
+                document.getElementById(LabelID).textContent = newValue;
+            }
         }
 
         function AddPoints(ScoreID, Points) {
@@ -58,6 +80,15 @@
         function ClearPoints() {
             document.getElementById("Speler1Score").textContent = 0
             document.getElementById("Speler2Score").textContent = 0
+        }
+
+        function OpenPopup(ScoreID) {
+            document.getElementById("popup").style.display = "block";
+            document.getElementById("popup").dataset.ScoreID = ScoreID;
+        }
+
+        function ClosePopup() {
+            document.getElementById("popup").style.display = "none";
         }
     </script>
 </body>

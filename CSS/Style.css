@@ -1,44 +1,71 @@
 ﻿body {
     background-color: #778ca3;
     color: white;
+    font-family: Segoe UI;
 }
 
 h1 {
     display: inline;
-    font-family: Calibri;
     font-size: 64px;
-    font-weight: bold;
+    font-weight: bolder;
     color: #353b48;
 }
 
-label {
-    display: inline;
-    font-family: Calibri;
+.label-naam {
+    display: inline-block;
+    font-size: 32px;
+    font-weight: bold;
+    width: 150px;
+}
+
+.label-score {
+    display: inline-block;
     font-size: 32px;
     font-weight: bold;
 }
 
-input {
-    display: inline;
-    font-family: Calibri;
-    font-size: 32px;
-    font-weight: bold;
-    color: white;
-    background: none;
-    border: none;
-}
-
-::placeholder {
-    color: white;
-}
-
-button {
-    font-family: Calibri;
+.button-reset {
     font-size: 64px;
     font-weight: bold;
     color: white;
     background-color: #353b48;
     border: none;
     border-radius: 5px;
-    margin-inline: 10px;
+    margin-inline: 320px;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 9999;
+}
+
+.popup-venster {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f1f2f6;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.popup-button {
+    display: block;
+    font-size: 32px;
+    font-weight: bold;
+    background-color: #353b48;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    width: 100%;
+    cursor: pointer;
 }
