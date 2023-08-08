@@ -1,38 +1,92 @@
-﻿body {
-    background-color: #778ca3;
+﻿body, h1, button, label, img {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f1f2f6;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #242526;
     color: white;
-    font-family: Segoe UI;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 h1 {
-    display: inline;
-    font-size: 64px;
-    font-weight: bolder;
-    color: #353b48;
+    text-align: center;
+    padding: 15px 0;
+    color: white;
 }
+
+.reset-button, .popup-button {
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #F26938;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 5px;
+    border-radius: 5px;
+    width: 125px;
+    transition: background-color 0.3s ease;
+}
+
+.cancel-button {
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #F26938;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 5px;
+    border-radius: 5px;
+    width: 125px;
+    transition: background-color 0.3s ease;
+}
+
+    .reset-button:hover, .popup-button:hover, .cancel-button:hover {
+        background-color: #F2522E;
+    }
+
+.label-naam, .label-score {
+    font-weight: bold;
+    font-size: 30px;
+    cursor: pointer;
+    color: #011640;
+    transition: color 0.3s ease;
+}
+
+    .label-naam:hover, .label-score:hover {
+        color: #F26938;
+    }
 
 .label-naam {
     display: inline-block;
-    font-size: 32px;
-    font-weight: bold;
-    width: 150px;
+    width: 200px;
 }
 
 .label-score {
     display: inline-block;
-    font-size: 32px;
-    font-weight: bold;
+    width: 50px;
 }
 
-.button-reset {
-    font-size: 64px;
-    font-weight: bold;
-    color: white;
-    background-color: #353b48;
-    border: none;
-    border-radius: 5px;
-    margin-inline: 320px;
+img {
+    cursor: pointer;
+    transition: transform 0.3s ease;
 }
+
+    img:hover {
+        transform: scale(1.1);
+    }
 
 .popup {
     display: none;
@@ -42,30 +96,26 @@ h1 {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
-    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
 }
 
 .popup-venster {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #f1f2f6;
+    background-color: #242526;
     padding: 10px;
-    border-radius: 5px;
-    text-align: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    margin-left: auto;
 }
 
-.popup-button {
-    display: block;
-    font-size: 32px;
-    font-weight: bold;
-    background-color: #353b48;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    margin-bottom: 5px;
-    margin-top: 5px;
-    width: 100%;
-    cursor: pointer;
+@media (max-width: 768px) {
+    img {
+        width: 80px;
+        height: 80px;
+    }
 }

@@ -7,8 +7,10 @@
     <link rel="stylesheet" href=".\CSS\Style.css" />
 </head>
 <body>
+    <header>
     <h1>Snooker Score</h1>
-    <button id="Reset" class="button-reset" onclick="ClearPoints()">Reset</button>
+    <button id="Reset" class="reset-button" onclick="ClearPoints()">Reset</button>
+    </header>
 
     <br />
 
@@ -55,7 +57,7 @@
             <button class="popup-button" onclick="AddPoints(document.getElementById('popup').dataset.ScoreID, 5); ClosePopup()">Blauw</button>
             <button class="popup-button" onclick="AddPoints(document.getElementById('popup').dataset.ScoreID, 6); ClosePopup()">Roze</button>
             <button class="popup-button" onclick="AddPoints(document.getElementById('popup').dataset.ScoreID, 7); ClosePopup()">Zwart</button>
-            <button class="popup-button" onclick="ClosePopup()">Cancel</button>
+            <button class="cancel-button" onclick="ClosePopup()">Cancel</button>
         </div>
     </div>
 
